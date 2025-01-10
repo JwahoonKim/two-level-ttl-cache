@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: local_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mydb  # 이걸로 기본 DB도 생성됨
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:7
+    container_name: local_redis
+    ports:
+      - "6379:6379"
