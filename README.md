@@ -40,10 +40,10 @@ sequenceDiagram
             A->>R: Release Lock
             A-->>C: Return Fresh Data
         else Lock Failed
-            A-->>C: Return Existing Data
+            R-->>C: Return Existing Data
         end
     end
-```
+``````
 
 ```kotlin
 @Aspect
